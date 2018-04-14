@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
+import Title from "./components/Title";
 import Wrapper from "./components/Wrapper";
 import friends from "./friends.json";
 
@@ -48,37 +49,16 @@ handleIncrement = id => {
 };
 
 
- //
- //  handleIncrement = id => {
- //    let value = this.state.clicked.indexOf(id)
- //
- //    console.log(value)
- //    if (value < 0 ) {
- //      this.setState({count: this.state.count + 1});
- //       this.setState({clicked:this.state.clicked.push(id)})
- //
- //      console.log(this.state.clicked)
- //    }
- //    else {
- //       this.setState({count:0, clicked:[]})
- //  }
- //
- //  this.setState({ friends });
- //
- // };
- //
-
-
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <div>
-        Friends List
+      <Title>Memory Game
+      </Title>
         <div>
           Current Score: {this.state.clicked.length}
           </div>
           <div>
-         highest Score: {this.state.highest}
+         Highest Score: {this.state.highest}
         </div>
         <Wrapper>
         {this.state.friends.map(friend => {
